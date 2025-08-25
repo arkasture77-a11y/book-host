@@ -1,0 +1,21 @@
+const textPath = 'pride.txt'; // file that you will upload into docs/
+
+async function loadBook(){
+  const el = document.getElementById('book');
+  el.textContent = 'Loading...';
+  try{
+    const r = await fetch(textPath);
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const txt = await r.text();
+    el.textContent = txt;
+  }catch(err){
+    el.textContent = 'Error loading book: '+err.message;
+    console.error(err);
+  }
+}
+
+function downloadBook(){
+  // Download directly from the hosted URL
+  const url = location.origin + location.pathname.replace(/\/$/, '') + '/pride.txt';
+  window.open(url, '_blank');
+}
