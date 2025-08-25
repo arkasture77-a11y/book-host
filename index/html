@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Book Host — Pride</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📚 Book Host — Pride and Prejudice</h1>
+  <button onclick="loadBook()">Read Pride and Prejudice</button>
+  <button onclick="downloadBook()">Download .txt</button>
+  <pre id="book" style="white-space:pre-wrap; max-height:70vh; overflow:auto; border:1px solid #ddd; padding:12px;"></pre>
+  <script src="app.js"></script>
+</body>
+</html>
